@@ -1,2 +1,2 @@
-# LIFT-AUTHENTICATION-SYSTEM
-Designed a lift authentication system integrating RFID, utilizing RTOS to manage time-critical tasks. This ensures precise, reliable, and seamless access control in a multi-user environment, enhancing security.
+RFID-Based Lift Authentication System
+Welcome to the RFID-Based Lift Authentication System repository! This project implements a secure access control system for elevators using RFID technology. Built on the ESP32 microcontroller and leveraging FreeRTOS, the system ensures real-time, reliable authentication in multi-user environments. Authentication logs are visualized on the cloud via ThingSpeak for monitoring and analysis. This repository includes hardware schematics, Arduino IDE-compatible C code, and detailed documentation, making it suitable for residential, commercial, and high-security applications.

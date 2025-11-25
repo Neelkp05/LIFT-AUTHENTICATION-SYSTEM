@@ -1,87 +1,134 @@
-![Banner Image](https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&h=300&q=80)
+<div align="center">
+  <img width="100%" height="300" src="https://images.unsplash.com/photo-1531297461136-82lw9b2b0a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Banner Image" style="object-fit: cover; border-radius: 10px;" />
+</div>
 
-<h1 align="center">🛗 Lift Authentication System</h1>
-<h3 align="center">Secure Access Control using ESP32 & FreeRTOS</h3>
+<div align="center">
+
+# Lift Authentication System
+### RTOS-Based Secure Access Control Implementation on ESP32
 
 <p align="center">
-  A real-time, multi-tasking security system designed to restrict elevator access to authorized personnel only.
+  <img src="https://img.shields.io/badge/Device-ESP32_WROOM-red?style=for-the-badge&logo=espressif" />
+  <img src="https://img.shields.io/badge/OS-FreeRTOS-green?style=for-the-badge&logo=freertos" />
+  <img src="https://img.shields.io/badge/Language-C++_/_Arduino-blue?style=for-the-badge&logo=arduino" />
+  <img src="https://img.shields.io/badge/Sensor-RFID_RC522-orange?style=for-the-badge&logo=nfc" />
+  <img src="https://img.shields.io/badge/University-Nirma_University-yellow?style=for-the-badge" />
 </p>
 
-<p align="center">
-  <a href="#about-the-project">About</a> •
-  <a href="#key-features">Key Features</a> •
-  <a href="#tech-stack">Tech Stack</a> •
-  <a href="#hardware-requirements">Hardware</a> •
-  <a href="#installation">Setup</a>
-</p>
+</div>
 
 ---
 
-## 🔭 About The Project
-[cite_start]This project presents a **Lift Authentication System** designed to enhance security and access control in residential and commercial buildings[cite: 6]. [cite_start]Unlike traditional systems, this solution leverages a **Real-Time Operating System (FreeRTOS)** to manage time-critical tasks with precision[cite: 7].
+## 📄 Abstract
+This project presents a **Lift Authentication System** designed to enhance security and access control in multi-user environments.
 
-[cite_start]The system integrates an **RFID reader** for user verification and a **Keypad** for floor selection, all processed by an **ESP32 microcontroller**[cite: 14, 15]. [cite_start]It ensures that high-priority tasks (like scanning a card) are executed immediately without lagging the display or logic[cite: 108].
-
-- [cite_start]⚡ **Performance:** Low latency response using interrupt-driven execution[cite: 98].
-- [cite_start]🛡️ **Security:** Prevents unauthorized access and cloning attacks[cite: 33].
-- [cite_start]🔄 **Multitasking:** Handles RFID scanning, LCD updating, and data logging simultaneously[cite: 118].
-
-## ⚙️ Key Features
-* [cite_start]**RFID Authentication:** Uses MFRC522 to scan and verify unique user IDs[cite: 77].
-* [cite_start]**RTOS Implementation:** Utilizes FreeRTOS for priority-based task scheduling[cite: 135].
-* [cite_start]**Interactive Interface:** 16x2 I2C LCD for real-time status and 4x4 Keypad for floor input[cite: 92, 206].
-* [cite_start]**Access Control Logic:** logic to validate authorized floors and deny invalid entries[cite: 78].
-* [cite_start]**Security Alerts:** Buzzer integration for unauthorized access attempts[cite: 91].
-
-## 🛠 Tech Stack & Tools
-<p align="left">
-  <a href="https://www.arduino.cc/" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="c++" width="50" height="50"/>
-  </a>
-  <a href="https://www.arduino.cc/" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/arduino/arduino-original.svg" alt="arduino" width="50" height="50"/>
-  </a>
-  <a href="https://www.espressif.com/" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/embeddedc/embeddedc-original.svg" alt="embedded" width="50" height="50"/>
-  </a>
-  <a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" alt="vscode" width="50" height="50"/>
-  </a>
-</p>
-
-## 🧩 Hardware Requirements
-[cite_start]The system is built using the following components[cite: 37, 38]:
-
-| Component | Specification | Function |
-| :--- | :--- | :--- |
-| **Microcontroller** | ESP32 Dev Module | [cite_start]Central processing & WiFi capabilities[cite: 42]. |
-| **RFID Module** | RC522 (13.56MHz) | [cite_start]Reads user tags/cards[cite: 81]. |
-| **Display** | 16x2 LCD (I2C) | [cite_start]Shows prompts, floor status, and errors[cite: 92]. |
-| **Input** | 4x4 Matrix Keypad | [cite_start]Allows users to select floors[cite: 206]. |
-| **Output** | Buzzer & Relay | [cite_start]Alerts and door lock mechanism[cite: 90]. |
-| **Power** | 9V Battery / 5V Reg. | [cite_start]System power supply[cite: 93]. |
-
-## 🚀 Getting Started
-
-1.  **Clone the Repo:**
-    ```sh
-    git clone [https://github.com/yourusername/lift-authentication-system.git](https://github.com/yourusername/lift-authentication-system.git)
-    ```
-2.  **Hardware Setup:** Connect the MFRC522 to the ESP32 SPI pins (SS=21, RST=5) and the LCD to I2C pins[cite: 191, 230].
-3.  **Software:** Open `lift_auth.ino` in Arduino IDE.
-4.  **Library Installation:** Install `MFRC522`, `Keypad`, `LiquidCrystal_I2C`, and `FreeRTOS`.
-5.  **Upload:** Connect ESP32 and upload the code.
-
-## 📸 System Output
-<p align="left">
-  <img src="https://via.placeholder.com/300x150?text=LCD+Status" alt="LCD Output" width="45%" />
-  <img src="https://via.placeholder.com/300x150?text=Serial+Log" alt="Serial Monitor" width="45%" />
-</p>
+The system utilizes an **ESP32 microcontroller** integrated with a **Real-Time Operating System (RTOS)** to manage time-critical authentication tasks with precision. By employing an **RFID Reader** for user verification and a keypad for floor selection, the system ensures that only authorized personnel can access specific floors. The use of FreeRTOS allows for deterministic task scheduling, ensuring that high-priority security tasks (like detecting an intrusion) do not block routine operations.
 
 ## 👥 Authors
-* [cite_start]**Aum Makwana** - *21bec062@nirmauni.ac.in* [cite: 2]
-* [cite_start]**Neel Patel** - *22bec076@nirmauni.ac.in* [cite: 4]
+* **Aum Makwana** (21BEC062)
+* **Neel Patel** (22BEC076)
+* *Dept:* Electronics and Communication - Nirma University
 
-<p align="center">
-  [cite_start]<i>Dept. of Electronics and Communication, Nirma University [cite: 3]</i>
+---
+
+## 🛠️ Tech Stack & Hardware
+<p align="left">
+  <a href="#" target="_blank">
+    <img src="https://img.shields.io/badge/ESP32-Microcontroller-red?logo=espressif&style=flat-square" alt="ESP32"/>
+  </a>
+  <a href="#" target="_blank">
+    <img src="https://img.shields.io/badge/FreeRTOS-Real_Time_OS-green?logo=freertos&style=flat-square" alt="FreeRTOS"/>
+  </a>
+  <a href="#" target="_blank">
+    <img src="https://img.shields.io/badge/Arduino_IDE-Development_Env-teal?logo=arduino&style=flat-square" alt="Arduino IDE"/>
+  </a>
+  <a href="#" target="_blank">
+    <img src="https://img.shields.io/badge/ThingSpeak-Cloud_Logging-orange?logo=mathworks&style=flat-square" alt="ThingSpeak"/>
+  </a>
 </p>
+
+| Component | Specification | Description |
+| :--- | :--- | :--- |
+| **Microcontroller** | ESP32-WROOM-32 | Dual-core 32-bit MCU, 240MHz, WiFi/BT. |
+| **Auth Sensor** | MFRC522 RFID | 13.56MHz frequency, SPI Interface. |
+| **Input Method** | 4x4 Matrix Keypad | Used for selecting floors (0-5). |
+| **Display** | 16x2 LCD (I2C) | Visualizes status: "Scanning", "Access Granted". |
+| **Actuators** | Relay & Buzzer | Controls lift door mechanism and security alerts. |
+
+---
+
+## ⚙️ Architecture & RTOS Implementation
+
+The system software is structured around **FreeRTOS** to handle multitasking efficiently. The key tasks include:
+
+1.  **RFID Authentication Task (High Priority):** Interrupt-driven detection of RFID tags to verify UID against a hardcoded whitelist.
+2.  **User Interface Task:** Manages the 4x4 Keypad input to capture floor selection within a 4-second timeout window.
+3.  **Display Task:** Updates the I2C LCD with real-time feedback (Floor Number, Auth Status) without blocking the processor.
+4.  **Logging Task:** Stores access logs (UID + Timestamp) for security monitoring.
+
+### 📸 System Diagram
+
+<div align="center"> 
+ <img width="600" alt="Block Diagram" src="https://github.com/user-attachments/assets/placeholder-block-diagram.png" />
+ <br>
+ <em>Figure 1: Block Diagram of the Lift Authentication System</em>
+</div>
+
+---
+
+## 🔌 Hardware Pin Mapping
+
+### ESP32 $\leftrightarrow$ Peripherals Connection
+
+| Peripheral | Component Pin | ESP32 Pin (GPIO) | Protocol |
+| :--- | :--- | :--- | :--- |
+| **RFID (RC522)** | SDA (SS) | `GPIO 21` | SPI |
+| | SCK | `GPIO 18` | SPI |
+| | MOSI | `GPIO 23` | SPI |
+| | MISO | `GPIO 19` | SPI |
+| | RST | `GPIO 5` | - |
+| **Keypad (Rows)** | R1, R2, R3, R4 | `13, 12, 14, 27` | Digital In |
+| **Keypad (Cols)** | C1, C2, C3, C4 | `26, 25, 33, 32` | Digital Out |
+| **LCD Display** | SDA | `GPIO 21` (Shared) | I2C |
+| | SCL | `GPIO 22` | I2C |
+
+*Note: The Keypad utilizes a matrix scanning algorithm to detect key presses efficiently.*
+
+---
+
+## 💻 Simulation & Results
+
+The system was tested in a residential simulation scenario.
+
+* **Authorized Access:** User scans valid card (UID `C0 E1 79 A3`), system prompts for floor. User presses '5', lift moves to Floor 5.
+* **Unauthorized/Timeout:** If an invalid tag is scanned or no floor is entered within 4 seconds, access is denied and the system resets.
+
+<div align="center"> 
+  <img width="45%" alt="Serial Monitor 1" src="https://github.com/user-attachments/assets/placeholder-serial-output.png" />
+  <img width="45%" alt="Hardware Implementation" src="https://github.com/user-attachments/assets/placeholder-hardware-photo.png" />
+  <br>
+  <em>Left: Serial Monitor Output | Right: Hardware Implementation</em>
+</div>
+
+### Code Snippet (Authorization Logic)
+```cpp
+// Check if the scanned tag matches authorized list
+bool checkAuthorization(String tagID) {
+    for (int i = 0; i < sizeof(authorizedTags) / sizeof(authorizedTags[0]); i++) {
+        if (tagID.equals(authorizedTags[i])) {
+            return true; // Tag is authorized
+        }
+    }
+    return false; // Not authorized
+}
+
+// Logic to move lift
+if (currentFloor < targetFloor) {
+    Serial.println("Lift is going up...");
+    // Loop through floors to simulate movement
+    for (int f = currentFloor; f <= targetFloor; f++) {
+        lcd.print("Floor: ");
+        lcd.print(f);
+        delay(1000); 
+    }
+}

@@ -69,9 +69,9 @@ The system software is structured around **FreeRTOS** to handle multitasking eff
 ### 📸 System Diagram
 
 <div align="center"> 
- <img width="600" alt="Block Diagram" src="https://github.com/user-attachments/assets/placeholder-block-diagram.png" />
+ <img width="788" height="1163" alt="ES Block Diagram" src="https://github.com/user-attachments/assets/0ae9c7fd-b0c4-448c-8d39-de0acf2fb415" />
  <br>
- <em>Figure 1: Block Diagram of the Lift Authentication System</em>
+ <em>Block Diagram of the Lift Authentication System</em>
 </div>
 
 ---
@@ -104,10 +104,15 @@ The system was tested in a residential simulation scenario.
 * **Unauthorized/Timeout:** If an invalid tag is scanned or no floor is entered within 4 seconds, access is denied and the system resets.
 
 <div align="center"> 
-  <img width="45%" alt="Serial Monitor 1" src="https://github.com/user-attachments/assets/placeholder-serial-output.png" />
-  <img width="45%" alt="Hardware Implementation" src="https://github.com/user-attachments/assets/placeholder-hardware-photo.png" />
+  <img width="467" height="440" alt="1 (1)" src="https://github.com/user-attachments/assets/b651fac1-10f7-46d1-aac3-38ffc5971610" />
+  <img width="495" height="145" alt="2" src="https://github.com/user-attachments/assets/8443affb-27d9-4f71-afd0-e70777db0e90" />
   <br>
-  <em>Left: Serial Monitor Output | Right: Hardware Implementation</em>
+  <em>Left: Serial Monitor Output 1 | Right: Serial Monitor Output 2 </em>
+</div>
+<div align="center"> 
+  ![IMG_20250330_191232](https://github.com/user-attachments/assets/1051cbc8-ac8b-48a6-a902-af3a3e8ba45b)
+  <br>
+  <em>Hardware Implementation  </em>
 </div>
 
 ### Code Snippet (Authorization Logic)

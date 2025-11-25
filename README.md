@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="100%" height="300" src="https://images.unsplash.com/photo-1531297461136-82lw9b2b0a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Banner Image" style="object-fit: cover; border-radius: 10px;" />
+ <img width="318" height="159" alt="image" src="https://github.com/user-attachments/assets/a03779fa-cf30-4fef-bf95-fb804d80a21a" />
 </div>
 
 <div align="center">

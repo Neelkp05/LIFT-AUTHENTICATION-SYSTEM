@@ -110,7 +110,7 @@ The system was tested in a residential simulation scenario.
   <em>Left: Serial Monitor Output 1 | Right: Serial Monitor Output 2 </em>
 </div>
 <div align="center"> 
-  ![IMG_20250330_191232](https://github.com/user-attachments/assets/1051cbc8-ac8b-48a6-a902-af3a3e8ba45b)
+  <img width="3072" height="3993" alt="harware implementation-min" src="https://github.com/user-attachments/assets/8973a507-8b8a-4056-af82-3cf097c24c6e" />
   <br>
   <em>Hardware Implementation  </em>
 </div>
